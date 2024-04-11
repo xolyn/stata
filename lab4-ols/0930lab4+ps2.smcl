@@ -1,0 +1,494 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4\0930lab4+ps2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}30 Sep 2022, 13:18:07
+
+{com}. do "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4\0930lab4+ps2.do"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. sysuse auto  
+{txt}(1978 automobile data)
+
+{com}. 
+. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. sysuse auto  
+{txt}(1978 automobile data)
+
+{com}. 
+. keep in 1/5
+{txt}(69 observations deleted)
+
+{com}. keep price trunk
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. sysuse auto  
+{err}no; dataset in memory has changed since last saved
+{txt}{search r(4), local:r(4);}
+
+end of do-file
+
+{search r(4), local:r(4);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. scatter price trunk
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4\0930lab4+ps2.do"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. sysuse auto  
+{err}no; dataset in memory has changed since last saved
+{txt}{search r(4), local:r(4);}
+
+end of do-file
+
+{search r(4), local:r(4);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. sum price 
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}price {c |}{res}          5        5058    1606.718       3799       7827
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. di r(mean)
+{res}5058
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. scalar pricebar=r(mean)
+{txt}
+{com}. 
+. sum trunk
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}trunk {c |}{res}          5          14    3.937004         11         20
+{txt}
+{com}. di r(mean)
+{res}14
+{txt}
+{com}. scalar trunkbar=r(mean)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. gen dT_dP=(price-pricebar)*(trunk-trunkbar)
+{txt}
+{com}. 
+. sum dT-dP 
+{err}variable {bf}dP{sf} not found
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. sum dT_dP 
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}dT_dP {c |}{res}          5      4490.4    6908.646       -484      16614
+{txt}
+{com}. scalar covTP=r(mean)
+{txt}
+{com}. di covTP
+{res}4490.4
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. gen dT2=(trunk-trunkbar)^2
+{txt}
+{com}. sum dT2
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 9}dT2 {c |}{res}          5        12.4    13.42758          4         36
+{txt}
+{com}. scalar varT=r(mean)
+{txt}
+{com}. 
+. scalar beta1hat=covTP/varT
+{txt}
+{com}. di beta1hat
+{res}362.12903
+{txt}
+{com}. 
+. di corr(trunk, price), cov
+{res}{err}unknown function corr()
+{txt}{search r(133), local:r(133);}
+
+end of do-file
+
+{search r(133), local:r(133);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. di corr trunk price, cov
+{res}{err}corr not found
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. corr trunk price, cov
+{txt}(obs=5)
+
+             {c |}    trunk    price
+{hline 13}{c +}{hline 18}
+       trunk {c |}{res}     15.5
+       {txt}price {c |}{res}     5613  2.6e+06
+
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. corr trunk price, cov
+{txt}(obs=5)
+
+             {c |}    trunk    price
+{hline 13}{c +}{hline 18}
+       trunk {c |}{res}     15.5
+       {txt}price {c |}{res}     5613  2.6e+06
+
+{txt}
+{com}. 
+. mat li r(C)
+{res}
+{txt}symmetric r(C)[2,2]
+         trunk    price
+trunk {res}    15.5
+{txt}price {res}    5613  2581542
+{reset}
+{com}. 
+. di r(C)[2,1]
+{res}5613
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4"
+{res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4
+{txt}
+{com}. 
+. sysuse auto, clear
+{txt}(1978 automobile data)
+
+{com}. 
+. keep in 1/5
+{txt}(69 observations deleted)
+
+{com}. keep price trunk
+{txt}
+{com}. 
+. *br as browse
+. 
+. scatter price trunk
+{res}{txt}
+{com}. 
+. *yi=β0+β1*xi+ui
+. 
+. sum price 
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}price {c |}{res}          5        5058    1606.718       3799       7827
+{txt}
+{com}. di r(mean)
+{res}5058
+{txt}
+{com}. scalar pricebar=r(mean)
+{txt}
+{com}. 
+. 
+. sum trunk
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}trunk {c |}{res}          5          14    3.937004         11         20
+{txt}
+{com}. di r(mean)
+{res}14
+{txt}
+{com}. scalar trunkbar=r(mean)
+{txt}
+{com}. 
+. gen dT_dP=(price-pricebar)*(trunk-trunkbar)
+{txt}
+{com}. 
+. sum dT_dP 
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 7}dT_dP {c |}{res}          5      4490.4    6908.646       -484      16614
+{txt}
+{com}. scalar covTP=r(mean)
+{txt}
+{com}. di covTP
+{res}4490.4
+{txt}
+{com}. 
+. gen dT2=(trunk-trunkbar)^2
+{txt}
+{com}. sum dT2
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 9}dT2 {c |}{res}          5        12.4    13.42758          4         36
+{txt}
+{com}. scalar varT=r(mean)
+{txt}
+{com}. 
+. scalar beta1hat=covTP/varT
+{txt}
+{com}. di beta1hat
+{res}362.12903
+{txt}
+{com}. 
+. corr trunk price, cov
+{txt}(obs=5)
+
+             {c |}    trunk    price
+{hline 13}{c +}{hline 18}
+       trunk {c |}{res}     15.5
+       {txt}price {c |}{res}     5613  2.6e+06
+
+{txt}
+{com}. 
+. mat li r(C)
+{res}
+{txt}symmetric r(C)[2,2]
+         trunk    price
+trunk {res}    15.5
+{txt}price {res}    5613  2581542
+{reset}
+{com}. 
+. di r(C)[2,1]
+{res}5613
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. scalar beta0hat= pricebar - beta1hat*trunkbar
+{txt}
+{com}. 
+. di beta0hat
+{res}-11.806452
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. gen pricehat=beta0hat+beta1hat*trunk-trunkbar
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. scatter price trunk || line pricehat price
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. scatter price trunk || line pricehat trunk
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. reg price trunk
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}         5
+{txt}{hline 13}{c +}{hline 34}   F(1, 3)         = {res}    11.11
+{txt}       Model {c |} {res} 8130521.03         1  8130521.03   {txt}Prob > F        ={res}    0.0446
+{txt}    Residual {c |} {res} 2195646.97         3  731882.323   {txt}R-squared       ={res}    0.7874
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.7165
+{txt}       Total {c |} {res}   10326168         4     2581542   {txt}Root MSE        =   {res}  855.5
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       price{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}trunk {c |}{col 14}{res}{space 2}  362.129{col 26}{space 2} 108.6488{col 37}{space 1}    3.33{col 46}{space 3}0.045{col 54}{space 4} 16.36018{col 67}{space 3} 707.8979
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-11.80645{col 26}{space 2} 1568.461{col 37}{space 1}   -0.01{col 46}{space 3}0.994{col 54}{space 4}-5003.348{col 67}{space 3} 4979.736
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. predict pricehat1
+{txt}(option {bf:xb} assumed; fitted values)
+
+{com}. br
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. using Earnings_and_Height.dta, clear
+{err}command {bf}using{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. use Earnings_and_Height.dta, clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. *a)
+. sum height, d
+
+                           {txt}height
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}       59             48
+{txt} 5%    {res}       61             48
+{txt}10%    {res}       62             49       {txt}Obs         {res}     17,870
+{txt}25%    {res}       64             49       {txt}Sum of wgt. {res}     17,870
+
+{txt}50%    {res}       67                      {txt}Mean          {res} 66.96335
+                        {txt}Largest       Std. dev.     {res}   3.9675
+{txt}75%    {res}       70             80
+{txt}90%    {res}       72             81       {txt}Variance      {res} 15.74106
+{txt}95%    {res}       74             83       {txt}Skewness      {res} .1463735
+{txt}99%    {res}       76             84       {txt}Kurtosis      {res}  2.51327
+{txt}
+{com}. *d for detail
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. gen short = height <= 67 
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. br
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5cc_000000.tmp"
+{txt}
+{com}. bysort short: sum earnings
+
+{txt}{hline}
+-> short = 0
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 4}earnings {c |}{res}      7,756    49987.88    26896.56   4726.391   84054.75
+
+{txt}{hline}
+-> short = 1
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 4}earnings {c |}{res}     10,114    44488.44    26700.39   4726.391   84054.75
+
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab4\0930lab4+ps2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}30 Sep 2022, 14:13:42
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

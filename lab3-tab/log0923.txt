@@ -1,0 +1,1578 @@
+
+  ___  ____  ____  ____  ____ ©
+ /__    /   ____/   /   ____/      17.0
+___/   /   /___/   /   /___/       SE—Standard Edition
+
+ Statistics and Data Science       Copyright 1985-2021 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-STATA-PC        https://www.stata.com
+                                   979-696-4600        stata@stata.com
+
+Stata license: 999-user network, expiring 23 Oct 2022
+Serial number: 401709300925
+  Licensed to: lzhou256@wisc.edu
+               UW-Madison
+
+Notes:
+      1. Unicode is supported; see help unicode_advice.
+      2. Maximum number of variables is set to 5,000; see help set_maxvar.
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. *ctrl + D to run
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. di "1"
+1
+
+. *ctrl + D to run
+. 
+. 
+end of do-file
+
+. di "1"
+1
+
+. use delimited gradeage.csv
+invalid 'gradeage.csv' 
+r(198);
+
+. use delimited "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3\gradeage.csv"
+invalid '"C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3\gradeage.csv' 
+r(198);
+
+. import delimited "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3\gradeage.csv"
+(encoding automatically selected: ISO-8859-1)
+(15 vars, 17 obs)
+
+. import delimited "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3\gradeage.csv", clear 
+(encoding automatically selected: ISO-8859-1)
+(15 vars, 17 obs)
+
+. browse
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. *ctrl + D to run
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\
+> STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber (34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\
+> STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber (34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\
+> STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber (34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\
+> STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber (34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\
+> STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. forvalue rename v2-v14 prob(#), addnum
+> ber(34)
+{ required
+r(100);
+
+end of do-file
+
+r(100);
+
+. do "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madis
+> on\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECO
+> N400\lab3
+
+. 
+. import delimited "gradeage.csv", clear
+>  rowrange(3:18) colrange(2:15) varname
+> s(noname)
+(encoding automatically selected: ISO-88
+> 59-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. *ctrl + D to run
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations               16   ->   208         
+Number of variables                  14   ->   3           
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+-----------------------------------------------------------------------------
+
+. 
+. 
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000.tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations               16   ->   208         
+Number of variables                  14   ->   3           
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+-----------------------------------------------------------------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat.
+. 
+. 
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000.tmp"
+
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3\command.do"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+. gen g_times_Pga=grade*prob/Pa
+
+. 
+. tabstat g_times_Pga, s(sum) by(age)
+
+Summary for variables: g_times_Pga
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  12.90566
+      35 |  13.13462
+      36 |  13.24125
+      37 |  13.09821
+      38 |  13.31507
+      39 |  13.21368
+      40 |  12.96154
+      41 |  13.11312
+      42 |   13.0875
+      43 |  12.89091
+      44 |  12.95706
+      45 |  12.75641
+      46 |        14
+---------+----------
+   Total |   170.675
+--------------------
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. save grade_age_long
+file grade_age_long.dta saved
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. save grade_age_long
+file grade_age_long.dta already exists
+r(602);
+
+end of do-file
+
+r(602);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. save grade_age_long, replace
+file grade_age_long.dta saved
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. collapse (sum) g_times_Pga, by(age)
+
+. 
+. rename g_x_Pga conditional_mean
+variable g_x_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. 
+. scatter conditional_mean age 
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. 
+. collapse (sum) g_times_Pga prob, by(age)
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+. gen g_times_Pga=grade*prob/Pa
+
+. 
+. tabstat g_times_Pga, s(sum) by(age)
+
+Summary for variables: g_times_Pga
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  12.90566
+      35 |  13.13462
+      36 |  13.24125
+      37 |  13.09821
+      38 |  13.31507
+      39 |  13.21368
+      40 |  12.96154
+      41 |  13.11312
+      42 |   13.0875
+      43 |  12.89091
+      44 |  12.95706
+      45 |  12.75641
+      46 |        14
+---------+----------
+   Total |   170.675
+--------------------
+
+. 
+. save grade_age_long, replace
+file grade_age_long.dta saved
+
+. 
+. collapse (sum) g_times_Pga, by(age)
+
+. 
+. rename g_times_Pga conditional_mean
+
+. 
+. scatter conditional_mean age 
+
+. 
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. rename g_times_Pga conditional_mean
+variable g_times_Pga not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+. gen g_times_Pga=grade*prob/Pa
+
+. 
+. tabstat g_times_Pga, s(sum) by(age)
+
+Summary for variables: g_times_Pga
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  12.90566
+      35 |  13.13462
+      36 |  13.24125
+      37 |  13.09821
+      38 |  13.31507
+      39 |  13.21368
+      40 |  12.96154
+      41 |  13.11312
+      42 |   13.0875
+      43 |  12.89091
+      44 |  12.95706
+      45 |  12.75641
+      46 |        14
+---------+----------
+   Total |   170.675
+--------------------
+
+. 
+. save grade_age_long, replace
+file grade_age_long.dta saved
+
+. 
+. collapse (sum) g_times_Pga, by(age)
+
+. 
+. rename g_times_Pga conditional_mean
+
+. 
+. scatter conditional_mean age 
+
+. 
+. use gradeage_long, clear
+file gradeage_long.dta not found
+r(601);
+
+end of do-file
+
+r(601);
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. cd "C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab
+> 3"
+C:\Users\JselZ\OneDrive - UW-Madison\ECON400\lab3
+
+. 
+. import delimited "gradeage.csv", clear rowrange(3:18
+> ) colrange(2:15) varnames(noname)
+(encoding automatically selected: ISO-8859-1)
+(14 vars, 16 obs)
+
+. 
+. rename v1 grade 
+
+. 
+. rename v2-v14 prob(#), addnumber(34)
+
+. 
+. reshape long prob, i(grade) j(age)
+(j = 34 35 36 37 38 39 40 41 42 43 44 45 46)
+
+Data                               Wide   ->   Long
+------------------------------------------------------
+> -----------------------
+Number of observations               16   ->   208    
+>      
+Number of variables                  14   ->   3      
+>      
+j variable (13 values)                    ->   age
+xij variables:
+               prob34 prob35 ... prob46   ->   prob
+------------------------------------------------------
+> -----------------------
+
+. 
+. tabstat prob, s(sum) by(age)
+
+Summary for variables: prob
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  .0236185
+      35 |  .1158645
+      36 |  .1145276
+      37 |  .0998217
+      38 |  .0975936
+      39 |  .1042781
+      40 |  .0926916
+      41 |  .0984848
+      42 |  .0713012
+      43 |  .0735294
+      44 |  .0726381
+      45 |  .0347594
+      46 |  .0008913
+---------+----------
+   Total |         1
+--------------------
+
+. *table for stat. (conditional prob. dist.)
+. 
+. // egen Pa sum(prob) by(grade)
+. 
+. bysort age: egen Pa= sum(prob)
+
+. 
+. gen g_times_Pga=grade*prob/Pa
+
+. 
+. tabstat g_times_Pga, s(sum) by(age)
+
+Summary for variables: g_times_Pga
+Group variable: age 
+
+     age |       Sum
+---------+----------
+      34 |  12.90566
+      35 |  13.13462
+      36 |  13.24125
+      37 |  13.09821
+      38 |  13.31507
+      39 |  13.21368
+      40 |  12.96154
+      41 |  13.11312
+      42 |   13.0875
+      43 |  12.89091
+      44 |  12.95706
+      45 |  12.75641
+      46 |        14
+---------+----------
+   Total |   170.675
+--------------------
+
+. 
+. save grade_age_long, replace
+file grade_age_long.dta saved
+
+. 
+. collapse (sum) g_times_Pga, by(age)
+
+. 
+. rename g_times_Pga conditional_mean
+
+. 
+. scatter conditional_mean age 
+
+. 
+. use grade_age_long, clear
+
+. 
+. collapse (sum) g_times_Pga prob, by(age)
+
+. 
+. rename g_times_Pga conditional_mean
+
+. 
+. rename prob Pa 
+
+. 
+. gen conditional_mean_times_Pa = conditional_mean*Pa
+
+. 
+. tabstat conditional_mean_times_Pa, s(sum)
+
+    Variable |       Sum
+-------------+----------
+conditiona~a |  13.09893
+------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\JselZ\AppData\Local\Temp\STD5e58_000000
+> .tmp"
+
+. use grade_age_long, clear
+
+. 
+. gen g2=grade^2 
+
+. 
+. gen g2_times_p=g2*prob
+
+. 
+. tabstat g2_times_p, s(sum)
+
+    Variable |       Sum
+-------------+----------
+  g2_times_p |  177.9358
+------------------------
+
+. 
+end of do-file
+
+. 
